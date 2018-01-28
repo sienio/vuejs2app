@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body style="background:#ffffff; margin-top:0; margin-bottom:0; padding-top:0; padding-bottom:0;">
+
+    <!-- WRAPPER-->
+    <div id="app" class="container">
+        <h2>{{ title }}</h2>
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
+        <div class="footer">
+            <hr>
+            <em>Zmien nazwe listy zakupow</em>
+            <input v-model="title">
+
+        </div>
+    </div>
+
+
+    <!-- END OF WRAPPER-->
+    <script type="text/javascript">
+        var data = {
+            items: ['Banany', 'Jabłka'],
+            title: 'Moja lista zakupow'
+        };
+        new Vue({
+            el: '#app',
+            data: data
+        });
+    </script>
+</body>
+
+</html>
